@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CargoSphere – Logistics Management</title>
+<meta name="description" content="Track shipments, manage orders and monitor logistics activity.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📦</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="app">
+  <aside id="side">
+    <a class="brand" href="#/dashboard"><span class="logo">C</span>CargoSphere</a>
+    <nav id="nav">
+      <a href="#/dashboard" data-r="dashboard">Dashboard</a>
+      <a href="#/shipments" data-r="shipments">Shipments</a>
+      <a href="#/tracking" data-r="tracking">Tracking</a>
+      <a href="#/orders" data-r="orders">Orders</a>
+      <a href="#/map" data-r="map">Live map</a>
+      <a href="#/analytics" data-r="analytics">Analytics</a>
+      <a href="#/notifications" data-r="notifications">Notifications <b id="badge" hidden></b></a>
+    </nav>
+  </aside>
+  <main>
+    <header>
+      <button id="menu" aria-label="Menu">☰</button>
+      <input id="q" type="search" placeholder="Search ID, customer, city, carrier" aria-label="Search shipments">
+      <a class="bell" href="#/notifications" aria-label="Notifications">🔔<b id="badge2" hidden></b></a>
+    </header>
+    <section id="view"></section>
+  </main>
+</div>
+<div id="toasts" aria-live="polite"></div>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
